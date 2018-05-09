@@ -1,4 +1,5 @@
 /* globals beerList */
+/* exported increaseQuantity, decreaseQuantity */
 
 'use strict';
 
@@ -11,6 +12,7 @@ function addBeer() {
         addImage(i);
         addDetails(i);
         addQuantityButton(i);
+        changeBackgroundColor(i);
     }
 }
 
@@ -45,44 +47,41 @@ function addDetails(i) {
     child = document.createElement('p');
     child.textContent = beerList[i].abv;
     parent.appendChild(child);
+}
 
-    
+function changeBackgroundColor(i) {
+    const parent = document.getElementById('beer-' + i);
+    parent.style.background = beerList[i].color;
 }
 
 function addQuantityButton(i) {
     const parent = document.getElementById('beer-' + i);
     let child = document.createElement('button');
-    child.setAttribute('onclick', 'decreaseQuantity()');
+    child.setAttribute('onclick', 'decreaseQuantity(' + i + ')');
     // child.setAttribute('id', 'beer-btn-' + i);
     child.textContent = '-';
     parent.appendChild(child);
 
     child = document.createElement('span');
-    child.setAttribute('id', i);
+    child.setAttribute('id', 'beer-count-' + i);
     child.textContent = beerList[i].quantity;
     parent.appendChild(child);
 
     child = document.createElement('button');
-    child.setAttribute('onclick', 'increaseQuantity()');
+    child.setAttribute('onclick', 'increaseQuantity(' + i + ')');
     // child.setAttribute('id', 'beer-btn-' + i);
     child.textContent = '+';
     parent.appendChild(child);
 }
 
-
-
-function increaseQuantity() {
-    let quantity = document.querySelector('span');
-    const index = quantity.getAttribute('id');
-    beerList[index].increaseQuantity();
-    console.log(beerList[index].quantity);
-    quantity.textContent = beerList[index].quantity;
+function increaseQuantity(i) {
+    let quantity = document.getElementById('beer-count-' + i);
+    beerList[i].increaseQuantity();
+    quantity.textContent = beerList[i].quantity;
 }
 
-function decreaseQuantity() {
-    let quantity = document.querySelector('span');
-    let index = quantity.getAttribute('id');
-    beerList[index].decreaseQuantity();
-    console.log(beerList[index].quantity);
-    quantity.textContent = beerList[index].quantity;
+function decreaseQuantity(i) {
+    let quantity = document.getElementById('beer-count-' + i);
+    beerList[i].decreaseQuantity();
+    quantity.textContent = beerList[i].quantity;
 }

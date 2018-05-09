@@ -1,17 +1,32 @@
 header {
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-end;
+    /* justify-content: space-evenly; */
+    align-items: center;
     background: red;
     border: 2px double white;
     padding: 20px;
+    width: 95%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    font-family: sans-serif;
 }
-
+#beer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 body {
     background: burlywood;
 }
 
+
 .beer {
+    /* display: flex; */
+    /* flex-direction: column; */
+    margin: 10px;
     border: 3px double black;
+    border-radius: 10px;
+    padding: 10px;
 }

@@ -31,7 +31,7 @@ const lunchBreak = new Beer(
     'lunchBreak.jpg',
     'Breakside',
     '4.7%',
-    'blue',
+    'goldenrod',
     '36'
 );
 
@@ -40,12 +40,39 @@ const breakside = new Beer(
     'breakside.jpg',
     'Breakside',
     '6.2%',
+    'beige',
+    '0'
+);
+const indiaGoldenAle = new Beer(
+    'India Golden Ale',
+    'IndiaGoldenAle.jpg',
+    'Breakside',
+    '8.2%',
+    'bisque',
+    '1'
+);
+const whatRoughBeast = new Beer(
+    'What Rough Beast',
+    'WhatRoughBeast.jpg',
+    'Breakside',
+    '6.8%',
     'white',
     '0'
+);
+const passionfruitSourAle = new Beer(
+    'Passionfruit Sour Ale',
+    'PFS.jpg',
+    'Breakside',
+    '5%',
+    'lavender',
+    '920'
 );
 
 const beerList = [
     wanderlust,
     lunchBreak,
-    breakside
+    breakside,
+    indiaGoldenAle,
+    whatRoughBeast,
+    passionfruitSourAle
 ];
