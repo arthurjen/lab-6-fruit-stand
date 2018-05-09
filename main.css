@@ -17,8 +17,10 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 body {
     background: burlywood;
+    font-family: Arial, sans-serif
 }
 
 

@@ -59,13 +59,22 @@ const whatRoughBeast = new Beer(
     'white',
     '0'
 );
-const passionfruitSourAle = new Beer(
-    'Passionfruit Sour Ale',
+const passionFruitSourAle = new Beer(
+    'Passion Fruit Sour Ale',
     'PFS.jpg',
     'Breakside',
     '5%',
     'lavender',
     '920'
+);
+
+const pilsner = new Beer(
+    'Pilsner',
+    'Pilsner.jpg',
+    'Breakside',
+    '5.2%',
+    'beige',
+    '64'
 );
 
 const beerList = [
@@ -74,5 +83,6 @@ const beerList = [
     breakside,
     indiaGoldenAle,
     whatRoughBeast,
-    passionfruitSourAle
+    passionFruitSourAle,
+    pilsner
 ];
