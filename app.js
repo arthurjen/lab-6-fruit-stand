@@ -6,7 +6,7 @@
 addBeer();
 
 function addBeer() {
-    for(let i = 0; i < beerList.length; i++) {
+    for(let i in beerList) {
         createDivs(i);
         addName(i);
         addImage(i);
@@ -19,8 +19,8 @@ function addBeer() {
 function createDivs(i) {
     const parent = document.getElementById('beer-list');
     const div = document.createElement('div');
-    div.setAttribute('id', 'beer-' + i);
-    div.setAttribute('class', 'beer');
+    div.id = 'beer-' + i;
+    div.classList = 'beer';
     parent.appendChild(div);
 }
 
@@ -62,7 +62,7 @@ function addQuantityButton(i) {
     parent.appendChild(child);
 
     child = document.createElement('span');
-    child.setAttribute('id', 'beer-count-' + i);
+    child.id = 'beer-count-' + i;
     child.textContent = ' ' + beerList[i].quantity + ' ';
     parent.appendChild(child);
 
@@ -72,7 +72,7 @@ function addQuantityButton(i) {
     parent.appendChild(child);
 
     child = document.createElement('button');
-    // child.setAttribute('onclick', 'addToCart()');
+    child.id = 'add-to-cart-' + i;
     child.textContent = 'Add to Cart';
     parent.appendChild(child);
 }
@@ -88,3 +88,9 @@ function decreaseQuantity(i) {
     beerList[i].decreaseQuantity();
     quantity.textContent = beerList[i].quantity;
 }
+function addToCart() {
+    alert('Added to cart.');
+}
+
+const cart = document.getElementById('add-to-cart-0');
+cart.onclick = addToCart;

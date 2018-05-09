@@ -48,7 +48,7 @@ const indiaGoldenAle = new Beer(
     'IndiaGoldenAle.jpg',
     'Breakside',
     '8.2%',
-    'bisque',
+    'gold',
     '1'
 );
 const whatRoughBeast = new Beer(
@@ -56,7 +56,7 @@ const whatRoughBeast = new Beer(
     'WhatRoughBeast.jpg',
     'Breakside',
     '6.8%',
-    'white',
+    'skyblue',
     '0'
 );
 const passionFruitSourAle = new Beer(
@@ -73,7 +73,7 @@ const pilsner = new Beer(
     'Pilsner.jpg',
     'Breakside',
     '5.2%',
-    'beige',
+    'bisque',
     '64'
 );
 
